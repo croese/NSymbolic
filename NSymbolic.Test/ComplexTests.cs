@@ -1,3 +1,4 @@
+using NSymbolic.Core;
 using Xunit;
 
 namespace NSymbolic.Test
@@ -5,9 +6,11 @@ namespace NSymbolic.Test
   public class ComplexTests
   {
     [Fact]
-    public void Pass()
+    public void ComplexNumberCanBeCreated()
     {
-      Assert.True(true);
+      var c = new Complex<int>(3, 4);
+      Assert.Equal(3, c.Real);
+      Assert.Equal(4, c.Imaginary);
     }
   }
 }
